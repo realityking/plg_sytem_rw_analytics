@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system">
+    <name>PLG_SYSTEM_RW_ANALYTICS</name>
+    <author>Rouven Weßling</author>
+    <creationDate>9 Feburary 211</creationDate>
+    <copyright>(C) 2011 Rouven Weßling. All rights reserved.</copyright>
+    <license>GNU/GPL</license>
+    <authorEmail>me@rouvenwessling.de</authorEmail>
+    <authorUrl>www.rouvenwessling.de</authorUrl>
+    <version>1.0</version>
+    <description>PLG_SYSTEM_RW_ANALYTICS_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="rw_analytics">rw_analytics.php</filename>
+        <filename>rw_analytics.xml</filename>
+    </files>
+
+    <languages>
+    	<language tag="en-GB">en-GB.plg_system_rw_analytics.sys.ini</language>
+    	<language tag="en-GB">en-GB.plg_system_rw_analytics.ini</language>
+    </languages>
+
+    <config>
+    	<fields name="params">
+    		<fieldset name="basic">
+    			<field name="account"
+    				type="text"
+    				label="PLG_SYSTEM_RW_ANALYTICS_ACCOUNT_LABEL"
+    				description="PLG_SYSTEM_RW_ANALYTICS_ACCOUNT_DESC"/>
+    			<field name="excluded-groups"
+    				type="usergroup"
+					label="PLG_SYSTEM_RW_ANALYTICS_EXCLLUDED_GROUPS_LABEL"
+					description="PLG_SYSTEM_RW_ANALYTICS_EXCLLUDED_GROUPS_DESC"
+					multiple="true"/>
+					<field name="anoymizeip"
+    				type="radio"
+    				label="PLG_SYSTEM_RW_ANALYTICS_ANONYMIZEIP_LABEL"
+    				description="PLG_SYSTEM_RW_ANALYTICS_ANONYMIZEIP_DESC"
+    				default="1">
+    					<option value="1">JYES</option>
+						<option value="0">JNO</option>
+    			</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="type"
+    				type="list"
+    				label="PLG_SYSTEM_RW_ANALYTICS_TYPE_LABEL"
+    				description="PLG_SYSTEM_RW_ANALYTICS_TYPE_DESC"
+    				default="0">
+    					<option value="0">PLG_SYSTEM_RW_ANALYTICS_TYPE_SINGLE</option>
+						<option value="1">PLG_SYSTEM_RW_ANALYTICS_TYPE_SUBDOMAINS</option>
+						<option value="2">PLG_SYSTEM_RW_ANALYTICS_TYPE_MULTIPLE</option>
+    			</field>
+    			<field name="domain"
+    				type="text"
+    				label="PLG_SYSTEM_RW_ANALYTICS_DOMAIN_LABEL"
+    				description="PLG_SYSTEM_RW_ANALYTICS_DOMAIN_DESC"
+    				default=".example.com"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
