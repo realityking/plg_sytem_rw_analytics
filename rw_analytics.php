@@ -54,7 +54,7 @@ _gaq.push(['_setAllowLinker', true]);";
 		$script .= "_gaq.push(['_trackPageview']);\n";
 
 		$doc->addScriptDeclaration($script);
-		$doc->addScript($file, 'text/javascript');
+		$doc->addScript($file, 'text/javascript', true, true);
 	}	
 }
 ?>
