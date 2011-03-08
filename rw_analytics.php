@@ -13,7 +13,7 @@ class plgSystemRW_analytics extends JPlugin
 		$doc = JFactory::getDocument();
 
 		// Only add the code when an HTML document is served and not in the Administration
-		if ((!$app->isAdmin()) && ($doc->getMimeEncoding() == 'text/html')) {
+		if (($app->isSite()) && ($doc->getMimeEncoding() == 'text/html')) {
 			$groups = (array) $this->params->get('excluded-groups', null);
 			if (!empty($groups)) {
 				$userGroups = JFactory::getUser()->get('groups');
