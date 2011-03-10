@@ -1,4 +1,9 @@
 <?php
+/**
+ * @copyright	Copyright (C) 2011 Rouven Weßling. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see license.txt
+ */
+
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
