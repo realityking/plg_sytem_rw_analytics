@@ -12,6 +12,8 @@ jimport('joomla.environment.browser');
 
 class plgSystemRW_analytics extends JPlugin
 {
+	private static $doTrack = false;
+
 	public function onAfterInitialise()
 	{
 		$app = JFactory::getApplication();
@@ -20,17 +22,25 @@ class plgSystemRW_analytics extends JPlugin
 		// Only add the code when an HTML document is served and not in the Administration
 		if (($app->isSite()) && ($doc->getMimeEncoding() == 'text/html')) {
 			$groups = (array) $this->params->get('excluded-groups', null);
+
 			if (!empty($groups)) {
 				$userGroups = JFactory::getUser()->get('groups');
 				if (!array_intersect($groups, $userGroups)) {
 					self::_addTracking();
+					self::$doTrack = true;
 				}
 			} else {
 				self::_addTracking();
+				self::$doTrack = true;
 			}
 		}		
 	}
-	
+
+	public static function onIsTracking()
+	{
+		return self::$doTrack;
+	}
+
 	private function _addTracking()
 	{
 		$doc = JFactory::getDocument();
