@@ -2,12 +2,12 @@
 <extension version="1.6" type="plugin" group="system">
     <name>PLG_SYSTEM_RW_ANALYTICS</name>
     <author>Rouven Weßling</author>
-    <creationDate>9 Feburary 211</creationDate>
+    <creationDate>8 June 211</creationDate>
     <copyright>(C) 2011 Rouven Weßling. All rights reserved.</copyright>
     <license>GNU/GPL</license>
     <authorEmail>me@rouvenwessling.de</authorEmail>
     <authorUrl>www.rouvenwessling.de</authorUrl>
-    <version>1.0</version>
+    <version>1.1</version>
     <description>PLG_SYSTEM_RW_ANALYTICS_XML_DESCRIPTION</description>
     <files>
         <filename plugin="rw_analytics">rw_analytics.php</filename>

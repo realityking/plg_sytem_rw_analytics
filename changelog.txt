@@ -1,4 +1,4 @@
-== Version 1.1 [XX XXXX 2011] ==
+== Version 1.1 [8 June 2011] ==
 *User defer and async attributes on the script element. Requires Joomla 1.6.1.
 *Fix some minor issues for the JED.
 
