@@ -4,10 +4,8 @@
  * @license		GNU General Public License version 2 or later; see license.txt
  */
 
-// no direct access
-defined( '_JEXEC' ) or die( 'Restricted access' );
+defined('_JEXEC') or die;
 
-jimport('joomla.plugin.plugin');
 jimport('joomla.environment.browser');
 
 class plgSystemRW_analytics extends JPlugin
@@ -72,4 +70,3 @@ _gaq.push(['_setAllowLinker', true]);";
 		$doc->addScript($file, 'text/javascript', true, true);
 	}	
 }
-?>

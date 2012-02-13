@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="1.6" type="plugin" group="system">
+<extension version="2.5" type="plugin" group="system">
     <name>PLG_SYSTEM_RW_ANALYTICS</name>
     <author>Rouven Weßling</author>
     <creationDate>8 June 211</creationDate>
